@@ -1,3 +1,4 @@
 import numpy
+import sys
 
-print("Hello from container")
+print(f"Hello {sys.argv[1]}")

@@ -7,7 +7,7 @@ FROM python:3.9  # Step 1
 WORKDIR /code  # Step 2
 
 # set environment variables
-ENV environment_var default_env_value  # Step 3
+ENV default_name="Default name"  # Step 3
 
 # Copy files and directories to a Docker image filesystem
 ADD main.python code  # Step 4
@@ -21,4 +21,4 @@ ENTRYPOINT []  # Default is ENTRYPOINT ["/bin/sh", "-c"]
 
 # Arguments that will be fed to the ENTRYPOINT
 # Set command the container executes by default when you run the built image
-CMD ["python", "./main.py"]
+CMD ["python", "./main.py", ${default_name}]
