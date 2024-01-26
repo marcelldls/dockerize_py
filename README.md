@@ -1,3 +1,7 @@
+## Build
 ```
-docker build -t python-app .
+docker build -t docker-app .
 ```
+
+## Run
+docker run -e default_name="Marcell" docker_app
